@@ -41,7 +41,7 @@ namespace Web.Api.IntegrationTests.Controllers
             // Assert
             var parameters = new Dictionary<string, string>
             {
-                { "username", "SeedUser" },
+                { "username", "TestUser" },
                 { "password", "password" }
             };
 

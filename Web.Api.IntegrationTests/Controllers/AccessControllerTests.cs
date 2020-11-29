@@ -29,7 +29,7 @@ namespace Web.Api.IntegrationTests.Controllers
         {
             var parameters = new Dictionary<string, string>
             {
-                { "username", "SeedUser" },
+                { "username", "TestUser" },
                 { "password", "password" }
             };
 

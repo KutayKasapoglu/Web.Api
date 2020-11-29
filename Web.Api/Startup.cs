@@ -77,9 +77,8 @@ namespace Web.Api
 
             var connectionStringBuilder = new SqlConnectionStringBuilder();
             connectionStringBuilder.ConnectionString = Configuration.GetConnectionString(ProjectConst.Configuration.DbConnection);
-            connectionStringBuilder.Password = CryptoHelper.Base64ForUrlDecode("a3R5QDIwMjA1");
+            connectionStringBuilder.Password = CryptoHelper.Base64ForUrlDecode(Configuration["Password"]);
             services.AddDbContext<BasketDbContext>(options => options.UseSqlServer(connectionStringBuilder.ToString()));
-            //services.AddDbContext<BasketDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString(ProjectConst.Configuration.DbConnection)));
 
             services.AddDbContext<BasketDbContext>(options => options.UseSqlServer());
             services.AddScoped<DbContext, BasketDbContext>();
